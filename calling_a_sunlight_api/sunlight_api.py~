@@ -22,7 +22,7 @@ print legislator_id
 
 
 # Section 4: Find out who this actually is
-r = requests.get('http://congress.api.sunlightfoundation.com/legislators?bioguide_id='+legislator_id+'&apikey=whatever_your_api_key_is')
+r = requests.get('http://congress.api.sunlightfoundation.com/legislators?bioguide_id='+legislator_id+'&apikey=c105eafac75e4f61b208de79bec4803f')
 legislator_result = r.json()
 
 say_this = legislator_result['results'][0]['first_name']+" "+legislator_result['results'][0]['last_name']+ " said lots of stuff about "+search_term+"."
