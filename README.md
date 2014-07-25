@@ -19,6 +19,8 @@ Contents
 
 **reading_a_csv**: Uses Python's csv package to open a .csv file and print out values in its first two columns for every row in that file
 
+**running_a_unit_test**: A example of the flow of test-driven development using the Python unittest module
+
 **scraping a web page**: Shows a simple use of BeautifulSoup to scrape links from an article about women DJs.
 
 **using a simple django form**: Lets the user, without logging in, enter a zip code into a single-field form, looks up service providers who match that zip code in a Postgres database, and spits out the results onto a second view.
