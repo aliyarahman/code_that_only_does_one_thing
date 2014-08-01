@@ -9,11 +9,7 @@ Generally, a requirements.txt file is included to document dependencies installe
 
 Contents
 --------
-**adding basic svg shapes**: Sets up an svg canvas on a page and adds a circle and a square
-
 **calling a sunlight api**: Calls the Sunlight API to look for a phrase that the user specifies. Prints it our pretty with prettyprint.
-
-**calling the Salesforce api**: Calls the Salesforce API and makes a query to find people signed up for housing alerts using the Python SimpleSalesforce package.
 
 **calling the twitter api**: Calls the Twitter API and asks for all the recent Tweets that mention #yesallwomen
 
