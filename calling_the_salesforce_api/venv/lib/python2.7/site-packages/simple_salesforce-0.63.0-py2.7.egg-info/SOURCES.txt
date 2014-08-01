@@ -1,0 +1,13 @@
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+simple_salesforce/__init__.py
+simple_salesforce/api.py
+simple_salesforce/login.py
+simple_salesforce/util.py
+simple_salesforce.egg-info/PKG-INFO
+simple_salesforce.egg-info/SOURCES.txt
+simple_salesforce.egg-info/dependency_links.txt
+simple_salesforce.egg-info/requires.txt
+simple_salesforce.egg-info/top_level.txt
