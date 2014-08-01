@@ -27,5 +27,7 @@ Contents
 
 **scraping a web page**: Shows a simple use of BeautifulSoup to scrape links from an article about women DJs.
 
+**sending a text message in twilio**: Send a basic text message to one number using the Twilio REST API
+
 **using a simple django form**: Lets the user, without logging in, enter a zip code into a single-field form, looks up service providers who match that zip code in a Postgres database, and spits out the results onto a second view.
 
