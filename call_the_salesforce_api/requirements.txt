@@ -1,0 +1,4 @@
+argparse==1.2.1
+requests==2.3.0
+simple-salesforce==0.63.0
+wsgiref==0.1.2

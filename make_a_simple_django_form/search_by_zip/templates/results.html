@@ -1,0 +1,21 @@
+<html>
+
+<head>
+	<title>Searching for providers</title>
+</head>
+
+<body>
+These are your results:
+
+<ul>
+{% for provider in providers %}
+<li>{{ provider.center_code }} (in zip: {{provider.five_digit_zip}}) </li>
+{% endfor %}
+
+</ul>
+
+</body>
+
+
+
+</html>
