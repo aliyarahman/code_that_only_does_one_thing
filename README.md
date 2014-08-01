@@ -25,7 +25,9 @@ Contents
 
 **running_a_unit_test**: A example of the flow of test-driven development using the Python unittest module
 
-**scraping a web page**: Shows a simple use of BeautifulSoup to scrape links from an article about women DJs.
+**scraping a web page with Beautiful Soup**: A simple use of BeautifulSoup to scrape links from an article about women DJs.
+
+**scraping email archives with lxml**: Looks at a table of a list's mailman archives, downloads each archive and unzips if necessary, puts all contents into one long text file
 
 **sending a text message in twilio**: Send a basic text message to one number using the Twilio REST API
 
