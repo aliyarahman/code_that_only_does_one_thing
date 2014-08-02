@@ -4,7 +4,6 @@ from django.contrib import admin
 from django.db.models import CharField, DateTimeField, ForeignKey, TextField, ImageField, IntegerField, OneToOneField
 
 
-
 class Forum(models.Model):
 	title = CharField(max_length=60)
 
@@ -15,19 +14,19 @@ class Forum(models.Model):
 class Thread(models.Model):
 	title = CharField(max_length=60)
 	created = DateTimeField(auto_now_add=True)
-#	creator = ForeignKey(User, blank=True, null=True)
+	creator = ForeignKey(User, blank=True, null=True)
 	forum = ForeignKey(Forum, related_name="threads")
 
 	def __unicode__(self):
 		return unicode("Thread: %s" % (self.title))
 
+
 class Post(models.Model):
 	title = CharField(max_length=60)
 	created = DateTimeField(auto_now_add=True)
-#	creator = ForeignKey(User, blank=True, null=True)
+	creator = ForeignKey(User, blank=True, null=True)
 	thread = ForeignKey(Thread, related_name="posts")
 	body = TextField(max_length=10000)
-
 
 	def __unicode__(self):
 		return u" %s - %s" % (self.thread, self.title)

@@ -5,7 +5,7 @@ from django.contrib.auth.models import User
 # Open the csv we're reading from
 with open('commotion-discuss.txt_sorted.csv', 'rb') as csvfile:
 	forum_data_reader = csv.reader(csvfile, delimiter=',', quotechar='"')
-'''	# Add forums
+	# Add forums
 	forums = []
 	for index, row in enumerate(forum_data_reader):
 		if index >0:
@@ -13,7 +13,12 @@ with open('commotion-discuss.txt_sorted.csv', 'rb') as csvfile:
 				forums.append(row[1])
 	for forum in forums:
 		f = Forum(title = forum)
-		f.save()'''
+		f.save()
+
+
+#### Note need to correct user password creation
+with open('commotion-discuss.txt_sorted.csv', 'rb') as csvfile:
+	forum_data_reader = csv.reader(csvfile, delimiter=',', quotechar='"')
 	# Add users
 	users = []
 	for index, row in enumerate(forum_data_reader):
@@ -27,11 +32,29 @@ with open('commotion-discuss.txt_sorted.csv', 'rb') as csvfile:
 		except:
 			firstname = "Unknown"
 			lastname = "User"
-		u = User(first_name = firstname, last_name = lastname, username = user, password="default123", email="default@forum.com")
+		u = User.objects.create_user(first_name = firstname, last_name = lastname, username = user, password="default123", email="default@forum.com")
 		u.save()
 
-			# Add threads
+with open('commotion-discuss.txt_sorted.csv', 'rb') as csvfile:
+	forum_data_reader = csv.reader(csvfile, delimiter=',', quotechar='"')
+		# Add threads
+	threads = []
+	for index, row in enumerate(forum_data_reader):
+		if index >0:
+			if row[2] not in threads:
+				threads.append(row[2])
+				creator = User.objects.filter(username = row[5]).first()
+				forum = Forum.objects.filter(title=row[1]).first()
+				title = row[2]
+				t = Thread(title =title, creator = creator, forum = forum)
+				t.save()
 
-
-
-			# Add messages
+# Add posts
+with open('commotion-discuss.txt_sorted.csv', 'rb') as csvfile:
+	forum_data_reader = csv.reader(csvfile, delimiter=',', quotechar='"')
+	for index, row in enumerate(forum_data_reader):
+		if index >0:
+			creator = User.objects.filter(username = row[5]).first()
+			thread = Thread.objects.filter(title = row[2]).first()
+			p = Post(creator=creator, thread=thread, title="", body=row[6])
+			p.save()
