@@ -26,26 +26,42 @@ with open(filename+'_sorted'+'.csv', 'wb') as csvfile:
 		except:
 			end_line = len(content)
 		# email_is_in = content[start_line]
-		### Find the username
+		
+		# Find the username
 		try:
 			usernameline = ((content[start_line+1]).split("("))
 			username = (usernameline[1].split(")")[0])
 		except:
 			username = "Unknown user on line", start_line
+		
 		# Find the date and time
 		try:
 			datetime = (content[start_line+2].split("Date: ")[1]).strip('\n')
 		except:
 			datetime = "Unknown datetime on line", start_line
+
 		# Find the timezone
 		timezone = (content[start_line+2])[-6:-1]
+
 		# Find the subject
 		try:
 			subject= (content[start_line+3].split(listname+"]")[1]).split('\n')[0]
 		except:
 			subject = "Unknown subject on line", start_line
+
 		# Find the message content (too long right now)
-		#####Uncomment###message_content = content[start_line+4:end_line]
-		message_content = "Placeholder_content"
+		try:
+			message_content = "".join(content[start_line+4:end_line])
+			if ">>" in message_content:
+				message_content = message_content.split(">>")[0]
+#			if "\n\nOn" in message_content:
+#				message_content = message_content.split("\n\nOn")[0]
+			if ">\n\n" in message_content:
+				message_content = message_content.split(">\n\n")[1]
+			if "---" in message_content:
+				message_content = message_content.split("---")[0]
+		except:
+			message_content = "Placehold"
+
 		# Write the csv file
 		archivewriter.writerow([index, subject, datetime, timezone, username, message_content])
