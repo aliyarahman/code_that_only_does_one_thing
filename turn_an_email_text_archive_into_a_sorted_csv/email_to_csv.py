@@ -17,15 +17,16 @@ for index, row in enumerate(content):
 # Assemble the csv by writing id, start_line, username, datetime, subject, full_username
 with open(filename+'_sorted'+'.csv', 'wb') as csvfile:
 	archivewriter = csv.writer(csvfile, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
-	archivewriter.writerow(["message_number", "starting_line", "ending_line"])
-	for index, row in enumerate(start_indexes):
-		username_is_in = content[row]
-		full_name_is_in = content[row+1]
-		datetime_is_in = content[row+2]
-		timezone_is_in = content[row+2]
-		subject_is_in = content[row+3]
+	archivewriter.writerow(["message_number", "starting_line", "ending_line", "message_content"])
+	for index, start_line in enumerate(start_indexes):
+		username_is_in = content[start_line]
+		full_name_is_in = content[start_line+1]
+		datetime_is_in = content[start_line+2]
+		timezone_is_in = content[start_line+2]
+		subject_is_in = content[start_line+3]
 		try:
 			end_line = start_indexes[index+1]-1
-			archivewriter.writerow([index, row, end_line])
 		except:
-			archivewriter.writerow([index, row])		
+			end_line = len(content)
+		message_content = content[start_line+4:end_line]
+		archivewriter.writerow([index, start_line, end_line, message_content])
