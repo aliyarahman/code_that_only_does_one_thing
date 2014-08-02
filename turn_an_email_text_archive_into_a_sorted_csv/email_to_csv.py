@@ -2,6 +2,7 @@ import csv
 
 #Open the raw text file
 filename = "commotion-discuss.txt"
+listname = "Commotion-discuss"
 with open(filename, "r") as archive_file:
 	content = archive_file.readlines()
 
@@ -17,8 +18,13 @@ for index, row in enumerate(content):
 # Assemble the csv by writing id, start_line, username, datetime, subject, full_username
 with open(filename+'_sorted'+'.csv', 'wb') as csvfile:
 	archivewriter = csv.writer(csvfile, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
-	archivewriter.writerow(["message_number", "starting_line", "ending_line", "username", "datetime","message_content"])
+	archivewriter.writerow(["message_number", "subject", "datetime","timezone", "username", "message_content"])
 	for index, start_line in enumerate(start_indexes):
+		# Find the endline
+		try:
+			end_line = start_indexes[index+1]-1
+		except:
+			end_line = len(content)
 		# email_is_in = content[start_line]
 		### Find the username
 		try:
@@ -31,14 +37,15 @@ with open(filename+'_sorted'+'.csv', 'wb') as csvfile:
 			datetime = (content[start_line+2].split("Date: ")[1]).strip('\n')
 		except:
 			datetime = "Unknown datetime on line", start_line
-		timezone_is_in = content[start_line+2]
-		subject_is_in = content[start_line+3]
+		# Find the timezone
+		timezone = (content[start_line+2])[-6:-1]
+		# Find the subject
 		try:
-			end_line = start_indexes[index+1]-1
+			subject= (content[start_line+3].split(listname+"]")[1]).split('\n')[0]
 		except:
-			end_line = len(content)
+			subject = "Unknown subject on line", start_line
 		# Find the message content (too long right now)
 		#####Uncomment###message_content = content[start_line+4:end_line]
 		message_content = "Placeholder_content"
 		# Write the csv file
-		archivewriter.writerow([index, start_line, end_line, username, datetime, message_content])
+		archivewriter.writerow([index, subject, datetime, timezone, username, message_content])
