@@ -1,8 +1,8 @@
 import csv
 
 #Open the raw text file
-filename = "commotion-discuss.txt"
-listname = "Commotion-discuss"
+filename = "commotion-announce.txt"
+listname = "Commotion-announce"
 with open(filename, "r") as archive_file:
 	content = archive_file.readlines()
 
@@ -18,7 +18,7 @@ for index, row in enumerate(content):
 # Assemble the csv by writing id, start_line, username, datetime, subject, full_username
 with open(filename+'_sorted'+'.csv', 'wb') as csvfile:
 	archivewriter = csv.writer(csvfile, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
-	archivewriter.writerow(["message_number", "subject", "datetime","timezone", "username", "message_content"])
+	archivewriter.writerow(["message_number", "forum", "subject", "datetime","timezone", "username", "message_content"])
 	for index, start_line in enumerate(start_indexes):
 		# Find the endline
 		try:
@@ -62,4 +62,4 @@ with open(filename+'_sorted'+'.csv', 'wb') as csvfile:
 			message_content = "Placehold"
 
 		# Write the csv file
-		archivewriter.writerow([index, subject, datetime, timezone, username, message_content])
+		archivewriter.writerow([index, listname, subject, datetime, timezone, username, message_content])

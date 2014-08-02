@@ -1,0 +1,504 @@
+message_number,forum,subject,datetime,timezone,username,message_content
+0,Commotion-announce, Commotion source now available via git daemon,"Tue, 20 Sep 2011 11:42:19 -0400",-0400,Brian Duggan,
+1,Commotion-announce, [Commotion-dev] Commotion source now,"Thu, 29 Sep 2011 12:55:18 -0500",-0500,Ben West,"I'm behind some pretty sketchy wifi in Detroit right now, which may be the
+cause, but I've so far been unable to check out the repo...
+
+bash#~/commotion$ git clone git://git.chambana.net/commotion-openwrt
+Initialized empty Git repository in
+/blah/blah/blah/commotion/commotion-openwrt/.git/
+fatal: The remote end hung up unexpectedly
+
+Anyone else having the same problem?
+
+On Tue, Sep 20, 2011 at 10:42 AM, Brian Duggan <duggan at newamerica.net>wrote:
+
+> "
+2,Commotion-announce, [Commotion-dev] Commotion source now,"Thu, 29 Sep 2011 13:56:40 -0400",-0400,Josh King,"Hi Ben,
+
+We recently pushed a bunch of updates to the development site, and 
+that's resulted in a few issues with the repository handling. Brian's 
+working on it and should have it fixed in a bit.
+
+On Thu 29 Sep 2011 01:55:18 PM EDT, Ben West wrote:
+> I'm behind some pretty sketchy wifi in Detroit right now, which may be the
+> cause, but I've so far been unable to check out the repo...
+>
+> bash#~/commotion$ git clone git://git.chambana.net/commotion-openwrt
+> Initialized empty Git repository in
+> /blah/blah/blah/commotion/commotion-openwrt/.git/
+> fatal: The remote end hung up unexpectedly
+>
+> Anyone else having the same problem?
+>
+> On Tue, Sep 20, 2011 at 10:42 AM, Brian Duggan <duggan at newamerica.net>wrote:
+>
+"
+3,Commotion-announce, [Commotion-dev] Commotion source now,"Thu, 29 Sep 2011 13:05:12 -0500",-0500,Chris Ritzo,"Ben,
+FYi Pulling a public clone worked for me a couple days ago.
+-Chris
+
+On Thu, Sep 29, 2011 at 12:56 PM, Josh King <joshking at newamerica.net> wrote:
+
+> Hi Ben,
+>
+> We recently pushed a bunch of updates to the development site, and
+> that's resulted in a few issues with the repository handling. Brian's
+> working on it and should have it fixed in a bit.
+>
+> On Thu 29 Sep 2011 01:55:18 PM EDT, Ben West wrote:
+> > I'm behind some pretty sketchy wifi in Detroit right now, which may be
+> the
+> > cause, but I've so far been unable to check out the repo...
+> >
+> > bash#~/commotion$ git clone git://git.chambana.net/commotion-openwrt
+> > Initialized empty Git repository in
+> > /blah/blah/blah/commotion/commotion-openwrt/.git/
+> > fatal: The remote end hung up unexpectedly
+> >
+> > Anyone else having the same problem?
+> >
+> > On Tue, Sep 20, 2011 at 10:42 AM, Brian Duggan <duggan at newamerica.net
+> >wrote:
+> >
+> "
+4,Commotion-announce, [Commotion-dev] Commotion source now,"Thu, 29 Sep 2011 14:07:05 -0400",-0400,Josh King,"Yeah, this was pretty recent. It was fixed, and then while we were 
+trying to fix some other stuff and push general upgrades it broke again 
+today. So it'll be working again soon. I'm also nearly finished setting 
+up a completely new server that will be a lot more reliable and 
+up-to-date.
+
+On Thu 29 Sep 2011 02:05:12 PM EDT, Chris Ritzo wrote:
+> Ben,
+> FYi Pulling a public clone worked for me a couple days ago.
+> -Chris
+>
+> On Thu, Sep 29, 2011 at 12:56 PM, Josh King <joshking at newamerica.net> wrote:
+>
+"
+5,Commotion-announce, [Commotion-dev] Commotion source now,"Thu, 29 Sep 2011 14:07:44 -0400",-0400,Brian Duggan,"Hi all,
+
+Apologies for the confusion. Apparently, git-daemon had been working 
+until we upgraded to gitolite as our access control method. gitolite 
+decided it should have complete control over whether something was 
+served via git-daemon, so nothing is currently available publicly. I 
+should have it resolved in a few minutes.
+
+Thanks,
+Brian
+
+On Thu Sep 29 14:05:12 2011, Chris Ritzo wrote:
+> Ben,
+> FYi Pulling a public clone worked for me a couple days ago.
+> -Chris
+>
+> On Thu, Sep 29, 2011 at 12:56 PM, Josh King <joshking at newamerica.net
+> <mailto:joshking at newamerica.net"
+6,Commotion-announce, [Commotion-dev] Commotion source now,"Thu, 29 Sep 2011 14:18:11 -0400",-0400,Brian Duggan,"commotion-openwrt is publicly available again. Sorry for the hiccup.
+
+Brian
+
+On Thu Sep 29 14:08:55 2011, Andrew Reynolds wrote:
+> Strange. I got the same error as Ben on commotion-openwrt, but I was
+> able to check out commotion.
+>
+> -andrew
+>
+> On 09/29/2011 02:07 PM, Brian Duggan wrote:
+"
+7,Commotion-announce, [Commotion-dev] Commotion source now,"Thu, 29 Sep 2011 18:09:11 -0000",-0000,Andrew Reynolds,"Strange. I got the same error as Ben on commotion-openwrt, but I was
+able to check out commotion.
+
+-andrew
+
+On 09/29/2011 02:07 PM, Brian Duggan wrote:
+> Hi all,
+> 
+> Apologies for the confusion. Apparently, git-daemon had been working 
+> until we upgraded to gitolite as our access control method. gitolite 
+> decided it should have complete control over whether something was 
+> served via git-daemon, so nothing is currently available publicly. I 
+> should have it resolved in a few minutes.
+> 
+> Thanks,
+> Brian
+> 
+> On Thu Sep 29 14:05:12 2011, Chris Ritzo wrote:
+"
+8,Commotion-announce, Commotion Project Site,"Tue, 04 Oct 2011 11:32:03 -0400",-0400,Andrew Reynolds,"In keeping with our commitment to make Commotion as user friendly as
+possible, OTI staffers have launched a new website focused on
+non-technical Commotion content.
+
+The new site, http://commotionwireless.net, is geared toward
+journalists, end users, and those who don't need to wade through the
+deeper technical details. The original project site,
+https://tech.chambana.net/projects/commotion, is for developers and
+other project contributors, who need to know the inner workings of the
+software.
+
+By separating the technical and non-technical content, we will be able
+to tailor each site to the needs of its users, making each more useful
+in the process. We will be overhauling the content and navigation of
+both sites in the coming weeks, and welcome questions, comments, and
+feedback.
+
+Andrew Reynolds
+Open Technology Initiative
+New America Foundation
+
+
+"
+9,Commotion-announce, Commotion Developer Release 1 is ready for,"Wed, 13 Mar 2013 19:33:51 -0400",-0400,seamus tuohy,"Commotion's first developer release (DR1) is now available for testing. 
+This version replaces our September 2012 pre-release (PR3) and adds 
+several new features. Though Commotion developers tested each component 
+feature, we will begin extensive pre-release testing of the entire DR1 
+suite in the coming weeks. We hope you will join us in testing the new 
+components.
+
+Pre-built Commotion packages for Ubiquiti routers and Android devices 
+can be found at https://commotionwireless.net/download, with DR1 listed 
+under Nightly Builds and PR3 listed as Stable. The download page also 
+provides links to the Commotion source code for those who wish to build 
+their own packages. We have pre-built images for testing on Ubiquiti 
+wireless hardware. The source code includes instructions for building 
+Commotion?s test release on other hardware for those that wish to test 
+on their own devices.
+
+The DR1 release brings a complete overhaul to the Commotion system while 
+still ensuring compatibility with PR3 release Commotion nodes. 
+Forward-facing features include a new theme, easy ""quickstart"" node 
+configuration, application announcement and discovery, and a one-click 
+troubleshooting tool. Behind the scenes, DR1 contains a core Commotion 
+daemon and new cryptographic system.
+
+The quickstart tool provides an easy interface for node configuration. 
+The Commotion daemon provides a common mesh network management interface 
+through an embedded library, and forms the core of future Commotion 
+platform development. Commotion's new application suite uses mDNS to 
+announce local applications across the network. Users can find local 
+applications using the router?s web-based application portal. Node 
+owners can easily manage and customize application portals for better 
+community application support. The application portal integrates the 
+Serval Project's key management daemon, which provides transparent 
+message encryption and authentication. Finally, the debugging helper 
+creates custom, downloadable documents for offline debugging by network 
+administrators.
+
+Each of these tools still requires thorough testing to ensure they are 
+both stable and well documented. If you are an interested user, 
+developer, hacker, or are just plain interested, we would love to hear 
+your feedback. Following initial internal testing, DR1 will undergo lab 
+testing on an eight-node physical test environment. Then we will install 
+on the Open Technology Institute?s (OTI's) 18-node testbed community 
+network. Once the software is deemed stable, we will deploy it on an 
+active six-node community wireless network for user testing.
+
+We will update the documentation to incorporate user feedback once 
+testing is completed. After the build has been thoroughly tested and DR1 
+has become stable, we will update the warning label on the downloads 
+page to reflect the capabilities and limitations of this release. We 
+will then bring the other Commotion platforms up to feature parity with 
+the DR1 Commotion OpenWRT release.
+
+
+
+
+"
+10,Commotion-announce, Commotion DR1.1 Release,"Mon, 10 Jun 2013 11:09:18 -0400",-0400,Josh King,"Hi all,
+
+Now that the download page on the main website is updated, I just wanted
+to send out the release notes for our latest point release. This should
+be the beginning of a more rapid release cycle. You can download DR1.1 at:
+
+https://commotionwireless.net/download
+
+Release notes below:
+
+Commotion DR1.1 Release Notes
+
+Developer Release 1.1 is the first stable release of the DR1 series.
+This release is the beginning of our new stable branch, and represents a
+significant step forward from our previous stable release.
+What is a Commotion release?
+
+Commotion release versions represent a target set of features for the
+entire project
+(http://code.commotionwireless.net/projects/commotion/wiki/Official_Version_Feature_Targets).
+Software packages for individual platforms (Linux, Windows, etc.) may be
+in different stages of development, and are labeled according to their
+supported features.
+Platform Availability:
+
+Currently, only the OpenWRT-based router firmware is DR1 compatible.
+Other platforms are under active development and are being brought up to
+feature parity. Current platform revisions can be found on the Official
+Version Feature Targets page.
+Features:
+
+    Easy-to-use setup wizard: The Commotion Quickstart provides a
+simple, one-step interface for setting up a Commotion node.
+
+    Local applications: The Commotion Apps Portal is an interface for
+creating and browsing for local network applications.
+
+    Common platform for managing settings: The Commotion Daemon provides
+a common management interface for maintaining the configurations of
+different community networks.
+
+    Encryption tools: Commotion configures industry-standard IBSS-RSN
+encryption by default, and provides the Serval crypto API to aid
+developers in creating secure applications.
+
+    Consistent visual style: New Commotion releases are all styled in
+accordance with the Commotion Human Interface Guidelines
+(http://commotionwireless.net/docs/hig/introduction).
+
+    Simplified debugging: A new Commotion Debugging Helper tool makes it
+easy to retrieve useful troubleshooting information from a node in the
+event of a network problem.
+
+Fixes:
+
+    Innumerable fixes and changes went into this release since Preview
+Release 3 (PR3), the previous stable branch. A complete list can be
+found on the Commotion project site.
+
+Included Components:
+
+    avahi-client v0.1:
+
+        Provides automatic network service discovery
+
+        https://github.com/opentechinstitute/avahi-client
+
+    commotion-apps v1.1
+
+        Web-based local application portal for Commotion-OpenWRT
+
+        https://github.com/opentechinstitute/commotion-apps/
+
+    commotion-debug-helper v0.1
+
+        A LuCI-based reporting tool to simplify the process of router
+troubleshooting
+
+        https://github.com/opentechinstitute/commotion-bug-info
+
+    commotion-quick-start v0.2
+
+        A one-click tool to simplify router configuration on first boot
+
+        https://github.com/opentechinstitute/commotion-quick-start
+
+    commotion-splash v1.0
+
+        A LuCI interface for configuring nodogsplash captive portal
+
+        https://github.com/opentechinstitute/commotion-splash
+
+    commotiond v0.1
+
+        An extensible daemon and library bundle that will form
+Commotion?s core administrative API and simplify the process of porting
+to new platforms
+
+        https://github.com/opentechinstitute/commotiond
+
+    luci-commotion-theme v1.1
+
+        HIG-compliant Commotion theme for OpenWRT routers
+
+        https://github.com/opentechinstitute/commotion-openwrt-theme
+
+    luci-commotion v0.1
+
+        Commotion configuration pages for the LuCI web interface
+
+        https://github.com/opentechinstitute/luci-commotion
+
+    olsrd-dnssd v0.1
+
+        Propagates multicast DNS (mDNS) service discovery advertisements
+        (DNSSD) over an OLSR mesh network
+
+
+https://github.com/opentechinstitute/olsrd/tree/release-0.6.5.4/lib/dnssd
+
+    olsrd-mdp v0.1
+
+        Plugin for signing OLSR mesh traffic
+
+
+https://github.com/opentechinstitute/olsrd/tree/release-0.6.5.4/lib/mdp
+
+    serval-crypto v2.0
+
+        Cryptographic libraries and API for signing mDNS service
+advertisements
+        https://github.com/opentechinstitute/serval-crypto
+
+
+
+"
+11,Commotion-announce, Commotion OpenWRT nightly builds,"Mon, 23 Sep 2013 20:32:03 -0400",-0400,Chris Ritzo,"Good evening Commotion users and community members:
+
+We are pleased to be again offering nightly builds of Commotion OpenWRT.
+
+Nightly builds of Commotion OpenWRT are generated from our build server
+and posted to http://downloads.commotionwireless.net/nightly and a link
+is available on https://commotionwireless.net/download/routers
+
+Nightly images contain the most up to date feature and bug fixes from
+our github repository, and should be considered working, yet unstable
+builds suitable for the development or testing.
+
+As always, your feedback and input is appreciated. Please contact the
+Commotion team with your questions, comments or concerns, either through
+our listservs, IRC, or via the forms on our website.
+
+https://commotionwireless.net/docs/#connect
+
+Best regards,
+-- 
+Chris Ritzo
+Technologist, Open Technology Institute
+New America Foundation
+
+
+
+
+"
+12,Commotion-announce, seeking input - what additional routers should,"Wed, 14 May 2014 08:42:01 -0400",-0400,Chris Ritzo,"Hello! The Commotion team is working on expanding support for additional
+router models and would love to hear from the community on this list
+about what routers you're using or would like to use with Commotion.
+
+I've put together a summary blog post with more info:
+http://commotionwireless.net/blog/2014/05/13/little-box-of-routers/
+
+With our upcoming point release (Commotion Router 1.1), we'll be adding
+supported images for several routers:
+
+- TP Link WDR4300
+- Mikrotik RB411AH
+- Buffalo G300NH
+- Buffalo AG300N
+
+In general, Commotion Router has these system requirements:
+
+- Wireless chipset (target) is ar71xx or atheros
+- The router has greater than 4MB of flash
+(4MB is recommended for optimal support - we're working on images for
+the many routers with 4MB of flash memory)
+- The router supports OpenWRT 10.x Attitude Adjustment or greater
+
+We’ve compiled a list of potentially compatible routers on our wiki as a
+guide
+(https://wiki.commotionwireless.net/doku.php?id=development_resources:router:hardware_compatibility_list)
+
+
+But we'd also like to hear from you to help focus our list to support
+hardware that's available in your area. We'd particularly like to hear
+from folks who are not in the US.
+
+If you are interested in helping out and have one or more of the routers
+on our list, contact us! We’ll even build a testing image for you if
+your device is compatible!
+
+-- 
+"
+13,Commotion-announce, [Commotion-dev] seeking input - what,"Wed, 14 May 2014 17:30:22 -0500",-0500,Ben West,"There are a handful of products now sold, similar in form factor to the
+small TP-Link routers, with affinity to mesh networks.  They're all quite
+OpenWRT friendly, so adding Commotion support could be as simple as adding
+another target to the buildbot's runlist.
+
+Mesh Potato v2
+http://store.villagetelco.com/mesh-potatoes/mesh-potato-2-basic.html
+
+GL-iNet v1 (this just recently appeared)
+http://www.gl-inet.com/w/?page_id=308&lang=en
+http://www.amazon.com/gp/product/B00JL2AOXQ?ie=UTF8&seller=A364119SDJA4QG&sn=alzhao(8MB
+flash)
+http://www.amazon.com/gp/product/B00JKFE0FW?ie=UTF8&seller=A364119SDJA4QG&sn=alzhao(16MB
+flash)
+
+There is also an upcoming product from Nubelium in Spain that looks near
+identical to the Mesh Potato v2:
+https://twitter.com/nubelium/media
+
+Likewise Serval's Mesh Extender device:
+https://www.indiegogo.com/projects/speak-freely
+
+P.S. I have Attitude Adjustment running with USB on a TP-Link TL3420 v2,
+too.  Still not doing anything useful with pivot root, tho.
+
+
+
+On Wed, May 14, 2014 at 7:42 AM, Chris Ritzo
+<critzo at opentechinstitute.org>wrote:
+
+> Hello! The Commotion team is working on expanding support for additional
+> router models and would love to hear from the community on this list
+> about what routers you're using or would like to use with Commotion.
+>
+> I've put together a summary blog post with more info:
+> http://commotionwireless.net/blog/2014/05/13/little-box-of-routers/
+>
+> With our upcoming point release (Commotion Router 1.1), we'll be adding
+> supported images for several routers:
+>
+> - TP Link WDR4300
+> - Mikrotik RB411AH
+> - Buffalo G300NH
+> - Buffalo AG300N
+>
+> In general, Commotion Router has these system requirements:
+>
+> - Wireless chipset (target) is ar71xx or atheros
+> - The router has greater than 4MB of flash
+> (4MB is recommended for optimal support - we're working on images for
+> the many routers with 4MB of flash memory)
+> - The router supports OpenWRT 10.x Attitude Adjustment or greater
+>
+> We’ve compiled a list of potentially compatible routers on our wiki as a
+> guide
+> (
+> https://wiki.commotionwireless.net/doku.php?id=development_resources:router:hardware_compatibility_list
+> )
+>
+>
+> But we'd also like to hear from you to help focus our list to support
+> hardware that's available in your area. We'd particularly like to hear
+> from folks who are not in the US.
+>
+> If you are interested in helping out and have one or more of the routers
+> on our list, contact us! We’ll even build a testing image for you if
+> your device is compatible!
+>
+> --
+> "
+14,Commotion-announce, Commotion Router v1.1.rc2 released!,"Mon, 16 Jun 2014 10:58:39 -0400",-0400,Josh King,"Hi all,
+
+I'm pleased to announce that we've just posted the second release
+candidate for the stable 1.1 version of the Commotion Router firmware.
+This version patches a memory leak in our Serval plugin, and also
+includes a number of small bugfixes and interface tweaks. You can find
+the release notes here:
+
+https://commotionwireless.net/blog/2014/06/13/commotion-router-1.1rc2-release-notes/
+
+and downloads here:
+
+https://commotionwireless.net/download/routers/
+
+We currently have images for a selection of Ubiquiti routers posted, and
+will be posting images for select TP-Link and Buffalo routers shortly.
+Pending completion of testing on one of our larger community testbed
+networks, this release will hopefully become v1.1 final within the next
+week or two.
+-- 
+Josh King
+Lead Technologist
+The Open Technology Institute
+http://opentechinstitute.org
+PGP Fingerprint: 8269 ED6F EA3B 7D78 F074 1E99 2FDA 4DA1 69AE 4999
+
+"
