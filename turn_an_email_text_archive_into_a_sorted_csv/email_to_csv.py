@@ -49,13 +49,11 @@ with open(filename+'_sorted'+'.csv', 'wb') as csvfile:
 		except:
 			subject = "Unknown subject on line", start_line
 
-		# Find the message content (too long right now)
+		# Find the message content and do some cleaning (needs to be improved)
 		try:
 			message_content = "".join(content[start_line+4:end_line])
 			if ">>" in message_content:
 				message_content = message_content.split(">>")[0]
-#			if "\n\nOn" in message_content:
-#				message_content = message_content.split("\n\nOn")[0]
 			if ">\n\n" in message_content:
 				message_content = message_content.split(">\n\n")[1]
 			if "---" in message_content:
