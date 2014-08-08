@@ -1,0 +1,28 @@
+<html>
+	<head>
+	 
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+		<link rel="stylesheet" type="text/css" href="style.css">
+
+	</head>
+
+	<body>
+
+		<span class="sentence">Select this option.</span>
+		<br>
+		<span class="sentence">Select this option.</span>
+		<br>
+		<span class="sentence">Select this option.</span>
+
+		<script type="text/javascript">
+
+		$('.sentence').click(function(){
+			$(this).toggleClass("highlight");
+		});
+
+
+		</script>
+
+	</body>
+</html>

@@ -33,6 +33,8 @@ Contents
 
 **send a text message in twilio**: Send a basic text message to one number using the Twilio REST API
 
+**toggle a strikethrough for a line of text in jquery** Uses the toggleClass() method to add and remove a class (that has a strikethrough) to a line of text
+
 **turn an email archive into a csv**: Basic string functions and loops parse email text to make a csv with fields for sender, subject, date, thread, content
 
 **use a simple django form**: Lets the user, without logging in, enter a zip code into a single-field form, looks up service providers who match that zip code in a Postgres database, and spits out the results onto a second view.
