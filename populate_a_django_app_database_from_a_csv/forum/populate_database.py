@@ -16,7 +16,6 @@ with open('commotion-discuss.txt_sorted.csv', 'rb') as csvfile:
 		f.save()
 
 
-#### Note need to correct user password creation
 with open('commotion-discuss.txt_sorted.csv', 'rb') as csvfile:
 	forum_data_reader = csv.reader(csvfile, delimiter=',', quotechar='"')
 	# Add users

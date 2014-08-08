@@ -19,6 +19,8 @@ Contents
 
 **launch a Flask app with a bare bones skeleton**: Launches an app that says 'Hello, world' in the browser, but has the full (yet bare) skeleton that larger apps will need.
 
+**make a div disappear using jquery**: Uses the jQuery click event and fadeOut() method to make a div disappear when you click it
+
 **make a widget using an iframe**: Shows the mechanics of widgetizing an existing Django app.
 
 **read a csv**: Uses Python's csv package to open a .csv file and print out values in its first two columns for every row in that file
