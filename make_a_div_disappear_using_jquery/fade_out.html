@@ -1,7 +1,7 @@
 <html>
 	<head>
 	 
-		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script type="text/javascript" src="jquery-1.11.1.min.js"></script>
 
 		<link rel="stylesheet" type="text/css" href="style.css">
 
@@ -9,13 +9,27 @@
 
 	<body>
 
+		<h1 class="top_headline"> Click me to bring shit back </h1>
+
 		<div class="green_box" >Click Me</div>
+
+		<div class="orange">What about this one?</div>
+
+
 
 		<script type="text/javascript">
 
+
+
 		$('div').click(function(){
-			$('div').fadeOut();
+			$(this).fadeOut();
 		});
+
+		$('h1.top_headline').click(function(){
+			$('div').fadeIn();
+		});
+
+
 
 		</script>
 

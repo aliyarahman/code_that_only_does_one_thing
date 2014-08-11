@@ -1,7 +1,7 @@
 <html>
 	<head>
 	 
-		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script type="text/javascript" src="jquery-1.11.1.min.js"></script>
 
 		<link rel="stylesheet" type="text/css" href="style.css">
 
@@ -9,7 +9,7 @@
 
 	<body>
 
-		<span class="sentence">Select this option.</span>
+		<span class="sentence bubblegum">Select this option.</span>
 		<br>
 		<span class="sentence">Select this option.</span>
 		<br>
@@ -18,9 +18,8 @@
 		<script type="text/javascript">
 
 		$('.sentence').click(function(){
-			$(this).toggleClass("highlight");
+			$(this).fadeToggle();
 		});
-
 
 		</script>
 
