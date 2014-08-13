@@ -11,9 +11,11 @@ Contents
 --------
 **add basic svg shapes**: Sets up an svg canvas on a page and adds a circle and a square
 
-**call the google geocode API**: Lets you enter in an address and retrieve its latitude and longitude
+**call an api through jquery ajax**: Calls the Google books API using jQuery's AJAX method and places some of the book's info in divs, also using jQuery
 
 **call a sunlight api**: Calls the Sunlight API to look for a phrase that the user specifies. Prints it our pretty with prettyprint.
+
+**call the google geocode API**: Lets you enter in an address and retrieve its latitude and longitude
 
 **call the Salesforce api**: Calls the Salesforce API and makes a query to find people signed up for housing alerts using the Python SimpleSalesforce package.
 

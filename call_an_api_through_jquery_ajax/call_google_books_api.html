@@ -1,0 +1,39 @@
+<html>
+
+  <head>
+
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+  </head>
+
+
+  <body>
+    <h1> This is some info about a book. </h1>
+
+    <div id="booktitle"><h2></h2></div>
+
+    <div id="author"><h3></h3></div>
+
+    <div id="description"></div>
+
+
+  <body>
+
+
+  <script>
+    $.ajax({
+        url: "https://www.googleapis.com/books/v1/volumes?q=isbn:9780745328485",
+        dataType: 'jsonp',
+        success: function(results){
+            var book = results.items[0].volumeInfo;
+            $('#booktitle h2').text(book.title);
+            $('#author h3').text(book.authors[0]);
+            $('#description').text(book.description);  
+        }
+    });
+
+  </script>
+
+</body>
+
+</html>
