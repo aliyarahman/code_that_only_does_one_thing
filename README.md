@@ -11,6 +11,8 @@ Contents
 --------
 **add basic svg shapes**: Sets up an svg canvas on a page and adds a circle and a square
 
+**add translation to a django app**: Allows users to switch back and forth between English and Spanish. Note settings in urls.py, views.py, settings.py, index.py, and the creation of a locale directory.
+
 **call an api through jquery ajax**: Calls the Google books API using jQuery's AJAX method and places some of the book's info in divs, also using jQuery
 
 **call a sunlight api**: Calls the Sunlight API to look for a phrase that the user specifies. Prints it our pretty with prettyprint.
