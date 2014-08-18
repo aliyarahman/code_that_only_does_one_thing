@@ -31,6 +31,8 @@ Contents
 
 **read a csv**: Uses Python's csv package to open a .csv file and print out values in its first two columns for every row in that file
 
+**rearrange a pdf**: Use the pyPdf library to pull out two pages of a PDF and make a new PDF out of them, with a printout of how many pages it has.
+
 **run a unit test**: A example of the flow of test-driven development using the Python unittest module
 
 **scrape a web page with Beautiful Soup**: A simple use of BeautifulSoup to scrape links from an article about women DJs.
