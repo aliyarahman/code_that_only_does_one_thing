@@ -23,6 +23,8 @@ Contents
 
 **call the twitter api**: Calls the Twitter API and asks for all the recent Tweets that mention #yesallwomen
 
+**create a bare bones angular app**: Creates a single-page Angular.js app that checks in/removes event attendees and displays current attendees in a list
+
 **launch a Flask app with a bare bones skeleton**: Launches an app that says 'Hello, world' in the browser, but has the full (yet bare) skeleton that larger apps will need.
 
 **make a div disappear using jquery**: Uses the jQuery click event and fadeOut() method to make a div disappear when you click it

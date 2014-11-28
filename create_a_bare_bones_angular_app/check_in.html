@@ -1,0 +1,40 @@
+<!doctype html>
+<html ng-app>
+	<head>
+		<meta charset="utf-8">
+		<title>This is a mini registration list for our event</title>
+	</head>
+
+	<body>
+
+		<form name="form" ng-controller="SignInList">
+			<h2>{{attendees.length}} Attendees</h2>
+			<p>
+			<input type="text" ng-model="newAttendee"/>
+			<button ng-click="addAttendee()">Check In</button>
+			</p>
+			<ul>
+			<li ng-repeat="(index, attendee) in attendees">
+				{{attendee}} <button ng-click="removeAttendee(index)">Remove</button>
+			</li>
+			</ul>
+		</form>
+
+
+		<script src="js/angular.min.js"></script>
+		
+		<script>
+			function SignInList($scope){
+				$scope.attendees = [];
+				$scope.addAttendee = function() {
+					$scope.attendees.push($scope.newAttendee);
+					$scope.newAttendee = null;
+					};
+				$scope.removeAttendee = function (index) {
+					$scope.attendees.splice(index, 1);
+				};
+			}
+		</script>
+
+	</body>
+</html>

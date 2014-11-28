@@ -11,25 +11,29 @@
 
 		<h1 class="top_headline"> Click me to bring shit back </h1>
 
-		<div class="green_box" >Click Me</div>
+		<div class="green_box" >Click Me     </div>
 
 		<div class="orange">What about this one?</div>
+
+		<div id="red"> This is red! </div>
 
 
 
 		<script type="text/javascript">
 
 
+     $('div.orange').click(function(){
 
-		$('div').click(function(){
-			$(this).fadeOut();
-		});
+       $('h1.top_headline').fadeOut();
 
-		$('h1.top_headline').click(function(){
+     });
+
+
+
+		$('h1.top_headline').mouseover(function(){
+
 			$('div').fadeIn();
 		});
-
-
 
 		</script>
 
