@@ -1,6 +1,7 @@
 #!usr/bin/env python
 
 import twitter  # This uses the python-twitter package. Install that using pip before you start.
+from local_creds import *
 
 # Section 1: Hey, can I ask you a question?"
 consumer_key = "enter_your_own_here"
@@ -15,7 +16,7 @@ api = twitter.Api(consumer_key = consumer_key,consumer_secret=consumer_secret, a
 
 
 # Section 2: Ask your question and store the answer
-search = api.GetSearch(term='yesallwomen', lang='en',result_type='recent')
+search = api.GetSearch(term='alternativefacts', lang='en',result_type='recent')
 
 # Section 3: Awesome, I have info - now I want to do stuff to it on my own machine
 for s in search:
