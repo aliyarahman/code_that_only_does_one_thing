@@ -1,9 +1,8 @@
 #!usr/bin/env python
 
 import twitter  # This uses the python-twitter package. Install that using pip before you start.
-from local_creds import *
 
-# Section 1: Hey, can I ask you a question?"
+# Section 1: Establish your credentials with the Twitter API"
 consumer_key = "enter_your_own_here"
 consumer_secret = "enter_your_own_here"
 access_token = "enter_your_own_here"
