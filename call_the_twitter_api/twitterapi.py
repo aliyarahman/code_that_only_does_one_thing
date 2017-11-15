@@ -15,8 +15,11 @@ api = twitter.Api(consumer_key = consumer_key,consumer_secret=consumer_secret, a
 
 
 # Section 2: Ask your question and store the answer
-search = api.GetSearch(term='alternativefacts', lang='en',result_type='recent')
-
+search = api.GetSearch(term='quitthecouncil', lang='en',result_type='recent')
+counter = 0
 # Section 3: Awesome, I have info - now I want to do stuff to it on my own machine
 for s in search:
+    counter +=1
 	print s.user.screen_name + "says: \t" + s.text
+
+print counter
