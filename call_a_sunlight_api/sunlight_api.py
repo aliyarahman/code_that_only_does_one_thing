@@ -1,3 +1,10 @@
+##### PLEASE NOTE  ####
+#The Sunlight Foundatoin no longer hosts all of their former APIs.
+# For an example that calls the OpenStates API,
+# see the new snippet in this folder called call_the_openstates_api.py
+########################
+
+
 # Section 1: Go get the tools so you can do requests and speak HTTP
 import requests
 import pprint	# Import the pretty-print data reader			
