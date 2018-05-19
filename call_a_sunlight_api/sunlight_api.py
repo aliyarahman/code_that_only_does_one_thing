@@ -1,14 +1,15 @@
-# Section 1: Go get the tools so you can do requests and pretend you're a browser that speaks HTTP
+# Section 1: Go get the tools so you can do requests and speak HTTP
 import requests
 import pprint	# Import the pretty-print data reader			
 
 
-# Section 1.5: Ask the user what they want to look up
+# Section 2: Ask the user what search term they want to look up?
 search_term = raw_input("What phrase do you want to look up?: ")
 
 # Section 2: Make the API call - ask it a question and save the answer in the r variable
 # NOTE you need to enter your own API key to the end of the url below
-url = 'http://capitolwords.org/api/1/phrases/legislator.json?phrase='+search_term+'&page=0&per_page=50&sort=count&apikey=what_ever_your_api_key_is'
+api_key = 'whatever_your_api_key_is'
+url = 'http://capitolwords.org/api/1/phrases/legislator.json?phrase='+search_term+'&page=0&per_page=50&sort=count&apikey='+api_key
 r = requests.get(url)
 
 # Section 3: Print out the answer we got from the API, in json format
