@@ -1,14 +1,23 @@
 Code That Only Does One Thing
 =============================
 
-Directories in this repository hold stand-alone code clusters that demonstrate bare-bones functionalities available in Python 2.7, Flask, Django, and libraries intended for use with them.
+Directories in this repository hold stand-alone code clusters that demonstrate bare-bones functionalities.
 
 Generally, a requirements.txt file is included to document dependencies installed on the virtual environment.
 
 
 
-Contents
---------
+Contents: v2
+------------------------------
+**start_a_web_server_in_node.js**: Pure Node.js, using the http module, to start a web server that listens on port 3000.
+
+
+
+Contents: v1 
+--------------------
+Code in v1 was written between 2014-2018. It makes use of Python 2.7 and mostly pre-ES6 JavaScript, and focused on providing guidance for developers working with Flask, Django, and libraries for use with them.
+
+
 **add basic svg shapes**: Sets up an svg canvas on a page and adds a circle and a square
 
 **add translation to a django app**: Allows users to switch back and forth between English and Spanish. Note settings in urls.py, views.py, settings.py, index.py, and the creation of a locale directory.
