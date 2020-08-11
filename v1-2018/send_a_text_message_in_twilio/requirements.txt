@@ -1,5 +1,5 @@
 argparse==1.2.1
-httplib2==0.9
+httplib2==0.18.0
 six==1.7.3
 twilio==3.6.6
 wsgiref==0.1.2
